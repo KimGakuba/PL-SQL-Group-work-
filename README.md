@@ -25,6 +25,8 @@ The system should:
 
 ### This project is part of a PL/SQL assessment involving collections, records, procedures, functions, commits, and testing.
 
+And as a group This project successfully demonstrates advanced PL/SQL programming using packages, triggers, collections, bulk operations, and database security concepts. The Hospital Management Package efficiently manages patient data, while the Security Monitoring System ensures safe access to the database through automated detection of suspicious login behavior. Together, they show the integration of performance, security, and data management in Oracle PL/SQL.
+
 ## *📌 2. How we Solved It*
 
 ✔ Step 1 — we created two tables:
