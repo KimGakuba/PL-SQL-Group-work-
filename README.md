@@ -16,8 +16,11 @@ The system should:
 ### This project is part of a PL/SQL assessment involving collections, records, procedures, functions, commits, and testing.
 
 ## *📌 2. How I Solved It*
+
 ✔ Step 1 — I created two tables:
+
 patientss
+
 doctorss
 
 --- 
@@ -25,46 +28,59 @@ doctorss
 ✔ Step 2 — I created the package specification:
 
 This defines:
+
 A record type for a patient
+
 A table type (collection) for bulk processing
+
 Procedures & functions required by the question
 
 
-![compiled package](https://github.com/KimGakuba/PL-SQL-Group-work-tackling-scenarios/blob/main/screenshots/Q4/creating%20package.png)
+![compiled package](https://github.com/KimGakuba/PL-SQL-Group-work-/blob/main/screenshots/Q4/creating%20package.png)
 
 ---
 
-![compiled procedure](https://github.com/KimGakuba/PL-SQL-Group-work-tackling-scenarios/blob/main/screenshots/Q4/tesfting%20the%20procedure.png)
+![compiled procedure](https://github.com/KimGakuba/PL-SQL-Group-work-/blob/main/screenshots/Q4/tesfting%20the%20procedure.png)
 
 
 ---
 
 ✔ Step 3 — I created the package body:
 Implemented:
+
 bulk_load_patients using FORALL
+
 show_all_patients returning SYS_REFCURSOR
+
 count_admitted returning a number
+
 admit_patient updating admitted status
+
 All operations use COMMIT for database consistency.
 
-![compiled body package](https://github.com/KimGakuba/PL-SQL-Group-work-tackling-scenarios/blob/main/screenshots/Q4/package%20body%20compolied.png)
+![compiled body package](https://github.com/KimGakuba/PL-SQL-Group-work-/blob/main/screenshots/Q4/package%20body%20compolied.png)
 
 ---
 
-![displaying patients](https://github.com/KimGakuba/PL-SQL-Group-work-tackling-scenarios/blob/main/screenshots/Q4/display%20patients.png)
+![displaying patients](https://github.com/KimGakuba/PL-SQL-Group-work-/blob/main/screenshots/Q4/display%20patients.png)
 
 ---
 
 ✔ Step 4 — I wrote test scripts:
+
 Insert multiple patients at once
+
 Display them
+
 Admit selected patients
+
 Verify admitted count
-![admitting pateint](https://github.com/KimGakuba/PL-SQL-Group-work-tackling-scenarios/blob/main/screenshots/Q4/admitting%20a%20patient.png)
+
+![admitting pateint](https://github.com/KimGakuba/PL-SQL-Group-work-/blob/main/screenshots/Q4/admitting%20a%20patient.png)
 
 ---
 
-![count admitted](https://github.com/KimGakuba/PL-SQL-Group-work-tackling-scenarios/blob/main/screenshots/Q4/count%20admitted.png)
+![count admitted](https://github.com/KimGakuba/PL-SQL-Group-work-/blob/main/screenshots/Q4/count%20admitted.png)
 
 
 🚀 Final Outcome
