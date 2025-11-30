@@ -2,7 +2,7 @@
 This project was completed by the following team members:  
 - NGABONZIZA Kim Gakuba — Student ID: 27670  
 - GATERA K. Jessicah — Student ID: 27630  
-- [Your Name] — Student ID: [ID]
+- Teta kevine — Student ID: 27973
 - [Your Name] — Student ID: [ID]
 - [Your Name] — Student ID: [ID]
 - [Your Name] — Student ID: [ID]
