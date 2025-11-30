@@ -25,9 +25,9 @@ The system should:
 
 ### This project is part of a PL/SQL assessment involving collections, records, procedures, functions, commits, and testing.
 
-## *📌 2. How I Solved It*
+## *📌 2. How we Solved It*
 
-✔ Step 1 — I created two tables:
+✔ Step 1 — we created two tables:
 
 patientss
 
@@ -35,7 +35,7 @@ doctorss
 
 --- 
 
-✔ Step 2 — I created the package specification:
+✔ Step 2 — we created the package specification:
 
 This defines:
 
@@ -55,7 +55,7 @@ Procedures & functions required by the question
 
 ---
 
-✔ Step 3 — I created the package body:
+✔ Step 3 — we created the package body:
 Implemented:
 
 bulk_load_patients using FORALL
@@ -76,7 +76,7 @@ All operations use COMMIT for database consistency.
 
 ---
 
-✔ Step 4 — I wrote test scripts:
+✔ Step 4 — we wrote test scripts:
 
 Insert multiple patients at once
 
