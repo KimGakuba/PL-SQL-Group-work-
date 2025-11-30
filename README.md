@@ -1,7 +1,7 @@
 ## 👥 Group Members  
 This project was completed by the following team members:  
 - NGABONZIZA Kim Gakuba — Student ID: 27670  
-- GATERA K. Jessicah — Student ID: 27630  
+- GATERA K Jessica — Student ID: 27630  
 - Teta kevine — Student ID: 27973
 - Umutoniwase Aliane— Student ID: 27771
 - Akariza GASANA Leslie — Student ID: 27413
