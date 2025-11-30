@@ -167,6 +167,29 @@ because it queried the same table during an insert.
 - Avoids mutating-table errors
 
 ---
+```
+CREATE OR REPLACE PROCEDURE send_security_email (
+    p_username  VARCHAR2,
+    p_count     NUMBER
+) AS
+BEGIN
+    UTL_MAIL.SEND(
+        sender     => 'security@company.com',
+        recipients => 'securityteam@company.com',
+        subject    => 'Security Alert: Suspicious Login',
+        message    => 'User ' || p_username ||
+                      ' has failed login ' || p_count ||
+                      ' times today.'
+    );
+END;
+/
+```
+The code gave us this error
+```
+PLS-00201: identifier 'UTL_MAIL.SEND' must be declared
+```
+"This means your Oracle database does NOT have UTL_MAIL enabled, or you don’t have permission to use it."
+
 
 📸 Screenshots
 
