@@ -1,3 +1,13 @@
+## 👥 Group Members  
+This project was completed by the following team members:  
+- NGABONZIZA Kim Gakuba — Student ID: 27670  
+- GATERA K. Jessicah — Student ID: 27630  
+- [Your Name] — Student ID: [ID]
+- [Your Name] — Student ID: [ID]
+- [Your Name] — Student ID: [ID]
+- [Your Name] — Student ID: [ID]
+
+---
 # Hospital Management Package — PL/SQL Project
 
 ---
@@ -94,3 +104,80 @@ Admission update works correctly
 Admitted count function returns accurate results
 
 Test scripts run successfully in SQL Developer / Oracle Live SQL
+
+
+
+
+
+
+
+
+# 🔐 Database Security Monitoring System  
+### (Suspicious Login Detection Using Oracle Triggers)
+
+## 📌 Project Overview  
+This project implements an automatic **security monitoring system** inside an Oracle database.  
+The system tracks all login attempts and automatically raises alerts when a user repeatedly enters incorrect login credentials.
+
+This project was created as part of a PL/SQL and Database Security assessment.
+
+---
+
+## 📘 **Problem Statement**
+The organization introduced a new security policy:
+
+> “If any user attempts to log in more than two times with incorrect credentials during the same day, the system must immediately record the event and trigger a security alert.”
+
+### To implement this, the database must:
+1. Store all login attempts  
+2. Detect suspicious repeated failures  
+3. Insert a security alert automatically  
+4. (Optional) Trigger an email notification  
+
+---
+
+## 🧩 **How the Problem Was Solved**
+
+### ✔ Step 1 — Login Audit Table  
+A table to record every login attempt (success or failure).  
+Used for monitoring and counting failed logins.
+
+![creating login auditt table](https://github.com/KimGakuba/PL-SQL-Group-work-/blob/main/screenshots/Q3/Creating%20table%20of%20login.png)
+
+### ✔ Step 2 — Security Alerts Table  
+Stores alerts when a user fails login more than two times in a day.
+
+![creating table for security alerts](https://github.com/KimGakuba/PL-SQL-Group-work-/blob/main/screenshots/Q3/creating%20table%20of%20security%20alerts.png)
+
+---
+
+### ✔ Step 3 — Compound Trigger (Mutating-safe)  
+A normal row-level trigger caused:
+```
+ORA-04091: table is mutating
+```
+because it queried the same table during an insert.
+
+**Solution:** A **compound trigger** that:  
+- Collects all failed attempts in memory  
+- After the statement completes, counts failures from the table  
+- Inserts alerts only when needed  
+- Avoids mutating-table errors
+
+---
+
+📸 Screenshots
+
+Add these after running the SQL commands in your Oracle SQL Developer
+
+1. Screenshot: Check login attempts:
+
+🖼️ ![checking login attempts](https://github.com/KimGakuba/PL-SQL-Group-work-/blob/main/screenshots/Q3/testing%20audit%20login.png)
+
+2. Screenshot: Check security alerts:
+
+🖼️ ![Checking security alerts](https://github.com/KimGakuba/PL-SQL-Group-work-/blob/main/screenshots/Q3/testing%20security%20alerts.png)
+
+3. Screenshot: Compound Trigger to Detect Failed Attempts
+
+🖼️ ![Compound Trigger to Detect Failed Attempts](https://github.com/KimGakuba/PL-SQL-Group-work-/blob/main/screenshots/Q3/compiling%20the%20monitor%20trigger.png)
